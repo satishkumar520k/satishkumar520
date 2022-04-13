@@ -1,0 +1,26 @@
+h3{
+    display: flex;
+}
+
+.p{
+    height: 15%;
+    width: 15%;
+    border: 1px solid black;
+}
+
+.c{
+    height: 50%;
+    width: 50%;
+    border: 1px solid black;
+    margin-top: 25%;
+    margin-left: 25%;
+    background-color: beige;
+}
+
+.red
+{
+    background-color: red;
+}
+.green{
+    background-color: green; 
+}

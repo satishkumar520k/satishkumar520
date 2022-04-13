@@ -1,0 +1,67 @@
+
+<input [(ngModel)]="filterTerm">
+<button (click) = "filter()">filter</button>
+<select [(ngModel)]="column">
+ <option>Vehicle</option>
+ <option>manufacturer</option>
+ <option>model</option>
+ <option>type</option>
+ <option>fuel</option>
+ <option>color</option>
+ <option>image</option>
+ <option>id</option>
+ </select>
+ <select [(ngModel)]="order">
+     <option>asc</option>
+     <option>desc</option>
+ </select>
+ <button (click)="sort()">sort</button>
+
+ <select [(ngModel)]="page1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    </select>
+    <select [(ngModel)]="limit">
+        <option>5</option>
+        <option>10</option>
+    </select>
+    <button (click)="page()">page</button>
+   
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>manufacturer</th>
+            <th>model</th>
+            <th>type</th>
+            <th>fuel</th>
+            <th>color</th>
+            <th>image</th>
+            <th>id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicledata of c">
+            <!-- <ng-container *ngIf="vehicledata.color =='orange',">  -->
+            <td>{{vehicledata.Vehicle}}</td>
+            <td>{{vehicledata.manufacturer}}</td>
+            <td>{{vehicledata.model|uppercase}}</td>
+            <td>{{vehicledata.type}}</td>
+            <td [ngClass]="vehicledata.fuel=='Electric'?'lightgreen':'pink'">{{vehicledata.fuel}}</td>
+            <td>{{vehicledata.color}}</td>
+            <!-- <td><img src="{{vehicledata.image}}" height="15%", width="15%"></td> -->
+            <td>{{vehicledata.id}}</td>
+            <!-- </ng-container> -->
+        </tr>
+    </tbody>    
+</table>

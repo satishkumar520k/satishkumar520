@@ -1,0 +1,101 @@
+<p>apps works!</p>
+
+<h3>Calculator</h3>
+<p>num1</p>
+<input type="number"[(ngModel)]="num1">
+<p>num2</p>
+<input type="number"[(ngModel)]="num2">
+<button (click)="sum()">+</button>
+<button (click)="sub()">-</button>
+<button (click)="mul()">*</button>
+<button (click)="div()">/</button>
+
+
+<h3>Rectangle</h3>
+    <p>length</p>   
+    <input type="number"[(ngModel)]="num3">
+    <p>width</p>
+    <input type="number"[(ngModel)]="num4">
+    <button (click)="area()">area</button>
+    <button (click)="perimeter()">perimeter</button>
+    <p>area is {{areaResult}}</p>
+    <p>perimeter is {{perimeterResult}}</p>
+
+
+<h3>Event Registration</h3>
+<input [(ngModel)]="name">
+<button (click)="submit()">Registration</button>
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<h3>Cart</h3>
+<input type="text"[(ngModel)]="product"><br>
+<input type="number"[(ngModel)]="quantity"><br>
+<input type="number"[(ngModel)]="price"><br>
+<button (click)="addtocart()">Add to Cart</button>
+
+<h4>Cart Items</h4>
+<table>
+    <thead>
+        <tr>
+            <th>product</th>
+            <th>quantity</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cartitem of cartitems">
+            <td>{{cartitem.product}}</td>
+            <td>{{cartitem.quantity}}</td>
+            <td>{{cartitem.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h4>Create Account</h4>
+<p>name</p>   
+<input type="text"[(ngModel)]="name1">
+<p>email</p>
+<input type="text"[(ngModel)]="email">
+<p>phone</p>   
+<input type="number"[(ngModel)]="phone">
+<p>city</p>
+<input type="text"[(ngModel)]="city">
+<button (click)="signup()">signup</button>
+
+
+<h4>list of users</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>name1</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>city</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let luser of lusers">
+            <td>{{luser.name1}}</td>
+            <td>{{luser.email}}</td>
+            <td>{{luser.phone}}</td>
+            <td>{{luser.city}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>color to...</h4>
+<!-- 
+<div class="p">
+    <div class="c">
+    </div>   
+</div> -->
+
+<div (click)="Change()" [ngClass]="isRed?'red':'green'">sdvvz</div>
+
+
+
+
+

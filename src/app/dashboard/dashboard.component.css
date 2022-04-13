@@ -1,0 +1,51 @@
+.parent{
+    min-height: 100%;
+    width: 100%;
+    background-color: rgb(255, 251, 251);
+    border: 2px solid black;
+    display: flex;
+}
+.left{
+    min-height: 100vh;
+    height: auto;
+    width: 20%;
+    border: 1px solid black;
+    background-color: rgb(190, 160, 109);
+}
+.right{
+    height: 100vh;
+    width: 80%;
+    background-color: rgb(242, 242, 234);
+    border: 1px solid black;
+}
+.but{
+    background-color: rgb(19, 118, 116);
+    border-radius: 15%;
+    width: 40%;
+    margin-left: 25%;
+}
+h6{ 
+    
+    margin-left: 15%;
+    text-transform: uppercase;
+}
+h5{
+    margin-left: 15%;
+    margin-top: 5%;
+}
+p{
+    margin-left: 15%;
+    
+}
+.aa{
+    margin-top: 5%;
+    
+}
+img{
+    height: 15%;
+    width: 15%;
+    margin-top: 15%;
+    margin-left: 15%;
+    border-radius: 50%;
+
+}

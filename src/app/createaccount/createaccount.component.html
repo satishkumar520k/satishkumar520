@@ -1,13 +1,31 @@
 <p>createaccount works!</p>
+<form [formGroup]="accountsForm" >
 <label>createaAt</label>
-<input type="text"><br>
+<input formControlName="createaAt"><br>
 <label>account_name</label>
-<input type="text"><br>
+<input formControlName="account_name"><br>
 <label>available_balance</label>
-<input type="number"><br>
+<input formControlName="available_balance"><br>
 <label>currency</label>
-<input type="number"><br>
-<label>user_image</label>
-<input type="image"><br>
+<input formControlNmae="currency"><br>
 <label>account_number</label>
-<input type="number">
+<input formControlName="account_number">
+<button (click)=submit()>submit</button>
+
+<label>card</label>
+<div formArrayName="card">
+    <div *ngFor ="let card of cardFormArray.controls;let i=index">
+        <div formGroupName="{{i}}">
+            <label>cardno</label>
+            <input formControlName="cardno"><br>
+            <label>expiry</label>
+            <input formControlName="expiry"><br>
+            <label>cvv</label>
+            <input formControName="cvv">
+        </div>
+        <button (click)="delete(i)">delete</button>
+    </div>
+</div>
+<button (click)="submit()">submit</button>
+<button (click)="add()">add</button>
+</form>

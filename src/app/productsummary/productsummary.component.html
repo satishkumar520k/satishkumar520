@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-lg-6 col-sm-6">
+        <app-productdetail [xyz]="xyz"></app-productdetail>
+    </div>
+</div>
+
+<div class="row">
+  <div class="card col-lg-3 col-sm-6" *ngFor="let product of product2" (click)="send(product)">  
+        <span>{{product.id}}&nbsp;{{product.category}}</span>   
+        <img class="card-img-top" src="{{product.image}}" alt="cardimage">
+        
+    <div class="card-body">
+        <h6 class="card-title">title:{{product.title}}</h6>
+        <h6>price:{{product.price|currency:"USA"}}</h6>    
+        <!-- <a href="#" class="btn btn-primary">add to cart</a> -->
+        <a class="btn btn-primary">add to cart</a>
+
+        
+        <!-- <a href="#" class="btn-btn-primary">buy</a> -->
+        <a class="btn-btn-primary">buy</a>
+
+    </div>           
+  </div>
+  <div class="col-lg-6 col-md-6 col-sm-12 col 12">
+
+  </div>
+</div>
+<p>{{xyz}}</p>

@@ -15,12 +15,13 @@
         <tr *ngFor="let products of productsdata">
             <td>{{products.id}}</td>
              <td>{{products.title}}</td>
-            <td>{{products.price}}</td>
+            <!-- <td>{{products.price|rupee}}</td> -->
+            <td>{{products.price|currency:'USA'}}</td>
             <td>{{products.description}}</td>
             <td>{{products.category}}</td>  
-            <td><img src="{{products.image}}" height="30%"  width="30%"></td>
+            <td><img src="{{products.image}}" height="40%"  width="40%"></td>
             <td>{{products.rating}}</td>
            
         </tr> 
-    </tbody>    
+    </tbody>   
 </table>

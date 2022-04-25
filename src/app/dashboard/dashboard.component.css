@@ -10,7 +10,7 @@
     height: auto;
     width: 20%;
     border: 1px solid black;
-    background-color: rgb(190, 160, 109);
+    background-color: rgb(26, 74, 57);
 }
 .right{
     height: 100vh;
@@ -44,8 +44,9 @@ p{
 img{
     height: 15%;
     width: 15%;
-    margin-top: 15%;
-    margin-left: 15%;
+    margin-top: 5%;
+    margin-left: 40%;
     border-radius: 50%;
 
 }
+

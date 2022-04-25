@@ -10,9 +10,9 @@ export class ProductsComponent implements OnInit {
 
   productsdata:any=[];
 
-  constructor(private productsdataservice:ProductsService) { 
+  constructor(private productsService:ProductsService) { 
 
-    productsdataservice.getProducts().subscribe(
+    productsService.getProducts().subscribe(
 
           (data:any)=>
           {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Vehicle } from '../vehicle';
 // import { subscribeOn } from 'rxjs';
 // import { error } from 'console';
 // import { Observable, subscribeOn } from 'rxjs';
@@ -11,12 +13,12 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehiclesummaryComponent implements OnInit {
 
-  c:any=[];  
+  c:Vehicle[]=<Vehicle[]>[];  
   filterTerm ="";
   filter()
   {
       this.cService.getfilteredVehicles(this.filterTerm).subscribe(
-        (data:any)=>{
+        (data:Vehicle[])=>{
           this.c=data;
         },
         (error:any)=>{
@@ -30,7 +32,7 @@ export class VehiclesummaryComponent implements OnInit {
   sort()
   {
       this.cService.getsortedVehicles(this.column,this.order).subscribe(
-        (data:any)=>{
+        (data:Vehicle[])=>{
           this.c=data;
         },
         (error:any)=>{
@@ -45,7 +47,7 @@ export class VehiclesummaryComponent implements OnInit {
   page()
   {
     this.cService.getpagedVehicles(this.page1,this.limit).subscribe(
-      (data:any)=>{
+      (data:Vehicle[])=>{
         this.c=data;
 
       },
@@ -54,11 +56,11 @@ export class VehiclesummaryComponent implements OnInit {
       }
     )
   }
-  constructor(private cService:VehicleService) 
+  constructor(private cService:VehicleService,private router:Router) 
   {
       cService.getVehicle().subscribe(
       
-          (data:any)=>
+          (data:Vehicle[])=>
           {
                this.c=data; 
           },
@@ -67,6 +69,30 @@ export class VehiclesummaryComponent implements OnInit {
                 alert("Internal server error")
           }
       )
+  }
+  
+   
+
+  // id=" ";
+  delete(Vehicleid:any)
+  {
+    this.cService.deleteVehicle(Vehicleid).subscribe(
+      (data:any)=>
+      {
+        this.c=data;
+      },
+      (error:any)=>
+
+      {
+        alert("internal server error")
+      }
+    )
+    
+  }
+  view(id:string)
+  {
+
+    this.router.navigateByUrl("/dashboard/employeedetails"+"/"+id)
   }
   ngOnInit(): void {
   }

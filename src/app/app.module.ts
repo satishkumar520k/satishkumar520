@@ -17,6 +17,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
 import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
 import { CreateaccountComponent } from './createaccount/createaccount.component';
+import { AllemployeesComponent } from './allemployees/allemployees.component';
+import { CreateemployeeComponent } from './createemployee/createemployee.component';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
+import { RupeePipe } from './rupee.pipe';
+import { CurrencyPipe } from './currency.pipe';
+import { AboutUsModule } from './about-us/about-us.module';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SiblingoneComponent } from './siblingone/siblingone.component';
+import { SiblingtwoComponent } from './siblingtwo/siblingtwo.component';
+import { ProductsummaryComponent } from './productsummary/productsummary.component';
+import { ProductdetailComponent } from './productdetail/productdetail.component';
+import { SheetComponent } from './sheet/sheet.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +44,25 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
     VehiclesummaryComponent,
     AccountsComponent,
     ProductsComponent,
-  
     CreatevehicleComponent,
-       CreateaccountComponent
+    CreateaccountComponent,
+    AllemployeesComponent,
+    CreateemployeeComponent,
+    EmployeedetailsComponent,
+    RupeePipe,
+    CurrencyPipe,
+    ParentComponent,
+    ChildComponent,
+    SiblingoneComponent,
+    SiblingtwoComponent,
+    ProductsummaryComponent,
+    ProductdetailComponent,
+    SheetComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,HttpClientModule,ReactiveFormsModule
+    AppRoutingModule,FormsModule,HttpClientModule,ReactiveFormsModule,
+    AboutUsModule
     
    ],
   providers: [],

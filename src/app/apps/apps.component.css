@@ -24,3 +24,36 @@ h3{
 .green{
     background-color: green; 
 }
+.top{
+    display: flex;
+    justify-content: space-around;
+    height: 35%;
+}
+.a{
+    background-color: rgb(222, 242, 242);
+    width: 32%;
+    margin-left: 1%;
+    text-align: center;
+}
+.b{
+    background-color: rgb(243, 222, 218);
+    width: 32%;
+    margin-left: 1%;
+    text-align: center;
+}
+.c{
+    background-color: rgb(255, 255, 229);
+    width: 32%;
+    height: 100%;
+    margin-top: 0%;
+    margin-left: 1%;
+    text-align: center;
+}
+
+.middle{
+    background-color: rgb(238, 223, 250);
+    width: 40%;
+    height: 35%;
+    margin-left: 1%;
+    text-align: center;
+}

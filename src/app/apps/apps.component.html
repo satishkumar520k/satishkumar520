@@ -1,39 +1,51 @@
 <p>apps works!</p>
 
-<h3>Calculator</h3>
+<div class="top">
+<div class="a">
+<h6>Calculator</h6>
 <p>num1</p>
 <input type="number"[(ngModel)]="num1">
 <p>num2</p>
-<input type="number"[(ngModel)]="num2">
+<input type="number"[(ngModel)]="num2"><br>     
 <button (click)="sum()">+</button>
 <button (click)="sub()">-</button>
 <button (click)="mul()">*</button>
 <button (click)="div()">/</button>
+</div>
 
-
-<h3>Rectangle</h3>
+<div class="b">
+<h6>Rectangle</h6>
     <p>length</p>   
     <input type="number"[(ngModel)]="num3">
     <p>width</p>
-    <input type="number"[(ngModel)]="num4">
+    <input type="number"[(ngModel)]="num4"><br>
     <button (click)="area()">area</button>
     <button (click)="perimeter()">perimeter</button>
     <p>area is {{areaResult}}</p>
     <p>perimeter is {{perimeterResult}}</p>
+</div>    
 
-
-<h3>Event Registration</h3>
-<input [(ngModel)]="name">
+<div class="c">
+<h6>Event Registration</h6>
+<input [(ngModel)]="name"><br>
 <button (click)="submit()">Registration</button>
 <ul>
     <li *ngFor="let name of names">{{name}}</li>
 </ul>
+</div>
+</div><br><br>
 
-<h3>Cart</h3>
-<input type="text"[(ngModel)]="product"><br>
-<input type="number"[(ngModel)]="quantity"><br>
-<input type="number"[(ngModel)]="price"><br>
-<button (click)="addtocart()">Add to Cart</button>
+<div class="middle">
+<h5>Cart</h5>
+<h6>product</h6>
+<input type="text" [(ngModel)]="product" placeholder="product"><br>
+<h6>quantity</h6>
+<input type="number"[(ngModel)]="quantity" placeholder="quantity"><br>
+<h6>price</h6>
+<input type="number"[(ngModel)]="price" placeholder="price"><br><br>
+<button (click)="addtocart()">Add to Cart</button><br><br>
+
+</div><br> <br>
 
 <h4>Cart Items</h4>
 <table>
@@ -41,7 +53,7 @@
         <tr>
             <th>product</th>
             <th>quantity</th>
-            <th>price</th>
+            <th>price</th><br>
         </tr>
     </thead>
     <tbody>
@@ -51,7 +63,7 @@
             <td>{{cartitem.price}}</td>
         </tr>
     </tbody>
-</table>
+</table><br>
 
 
 <h4>Create Account</h4>

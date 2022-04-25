@@ -1,6 +1,6 @@
-
+<p>accounts works!</p>
 <input [(ngModel)]="filterTerm">
-<button (click) = "filter()">filter</button><p>accounts works!</p>
+<button (click) = "filter()">filter</button>
 <select [(ngModel)]="column">
     <option>createaAt</option>
     <option>account_name</option>
@@ -48,7 +48,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let account of accdata">      
-            <td >{{account.createaAt}}</td><br>
+            <td >{{account.createaAt}}</td>
             <td>{{account.account_name}}</td>
             <td>{{account.available_balance}}</td>
             <td>{{account.available_balance}}</td>

@@ -27,6 +27,11 @@ export class AccountsService {
     return this.httpclient.get("https://6128991386a213001729f9df.mockapi.io/test/v1/principals"+'?page='+page1+'&limit='+limit)
   }
 
+  postaccounts(accounts:any):Observable<any>
+  {
+    return this.httpclient.post("https://6128991386a213001729f9df.mockapi.io/test/v1/principals",accounts)
+  }
+
   constructor(private httpclient:HttpClient) { }
 
 }

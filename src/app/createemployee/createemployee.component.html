@@ -1,0 +1,101 @@
+
+    <p>createemployee works!</p>
+<form [formGroup]="employeeForm">
+    <label>name</label>
+    <input formControlName="name"><br>
+    <!-- <p>touched:{{employeeForm.get('name')?.touched}}</p>
+    <p>dirty:{{employeeForm.get('name')?.dirty}}</p>
+    <p>value:{{employeeForm.get('name')?.value}}</p>
+    <p>invalid:{{employeeForm.get('name')?.invalid}}</p>
+    <p>errors:{{employeeForm.get('name')?.errors|json}}</p> -->
+    <div *ngIf="employeeForm.get('name')?.touched && employeeForm.get('name')?.invalid">
+    <p class="error" *ngIf="employeeForm.get('name')?.errors?.['required']">this is required</p>
+    <p class="error" *ngIf="employeeForm.get('name')?.errors?.['minlength']">this is minlength</p>
+    <p class="error" *ngIf="employeeForm.get('name')?.errors?.['maxlength']">this is maxlength</p>
+    </div>
+
+    <label>mobile</label>
+    <input formControlName="mobile"><br>
+    <div *ngIf="employeeForm.get('mobile')?.touched && employeeForm.get('mobile')?.invalid">
+        <p class="error" *ngIf="employeeForm.get('mobile')?.errors?.['required']">this is required</p>
+        <p class="error" *ngIf="employeeForm.get('mobile')?.errors?.['minlength']">this is minlength</p>
+        <p class="error" *ngIf="employeeForm.get('mobile')?.errors?.['maxlength']">this is maxlength</p>
+        </div>
+    <label>email</label>
+    <input formControlName="email"><br>
+    <label>dob</label>
+    <input formControlName="dob"><br>
+    <label>address</label>
+    <div formGroupName="address">
+        <!-- <div *ngIf="employeeForm.get('address')?.get('pincode')?.touched && employeeForm.get('address')?.get('pincode')?.invalid">
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['required']">this is required</p>
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['minlength']">this is minlength</p>
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['maxlength']">this is maxlength</p>
+            </div> -->
+        <label>addressline</label>
+        <input formControlName="adressline"><br>
+        <label>city</label>
+        <input formControlName="city"><br>
+        <label>state</label>
+        <input formControlName="state"><br>
+        <label>pincode</label>
+        <input formControlName="pincode">
+        <div *ngIf="employeeForm.get('address')?.get('pincode')?.touched && employeeForm.get('address')?.get('pincode')?.invalid">
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['required']">this is required</p>
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['minlength']">this is minlength</p>
+            <p class="error" *ngIf="employeeForm.get('address')?.get('pincode')?.errors?.['maxlength']">this is maxlength</p>
+            </div>
+    </div><br><br>
+
+    <label>education</label>
+    <div formArrayName="education">
+        <div *ngFor ="let education of educationFormArray.controls;let i=index">
+            <div formGroupName="{{i}}">
+                <label>qualification</label>
+                <input formControlName="qualification"><br>
+                <label>year</label>
+                <input formControlName="year"><br>
+                <label>percentage</label>
+                <input formControName="percentage">
+                <div *ngIf="employeeForm.get('education')?.get('percentage')?.touched && employeeForm.get('education')?.get('percentage')?.invalid">
+                    <p class="error" *ngIf="educationFormArray.controls[i].get('percentage')?.errors?.['required']">this is required</p>
+                    <p class="error" *ngIf="educationFormArray.controls[i].get('percentage')?.errors?.['minlength']">this is minlength</p>
+                    <p class="error" *ngIf="educationFormArray.controls[i].get('percentage')?.errors?.['maxlength']">this is maxlength</p>
+                    </div>
+            </div>
+            <button (click)="delete(i)">delete</button> 
+        </div>
+        <!-- <label>qualification</label>
+        <input formControlName="qaulification"><br>
+        <label>year</label>
+        <input formControlName="year"><br>
+        <label>percentage</label>
+        <input formControName="percentage"> -->
+    </div>
+    <button [disabled]="employeeForm.invalid" (click)="submit()">submit</button>
+    <button (click)="add()">add</button><br><br>
+    
+    --------------------------------------------------------------------------------------------<br>
+    
+    <label>FE(fronend)</label>
+    <input type="radio" name="role" formControlName="role" value="FE">
+
+    <label>BE</label>
+    <input type="radio" name="role" formControlName="role" value="BE"><br>
+
+    <div *ngIf="employeeForm.get('role')?.value=='FE'">
+    <label>html</label>
+    <input type="text" formControlName="html"><br>
+    <label>angular</label>
+    <input type="text" formControlName="angular"><br>\
+    </div>
+
+    <div *ngIf="employeeForm.get('role')?.value=='BE'">
+
+    <label>java</label>
+    <input type="text" formControlName="java"><br>
+    <label>sql</label>
+    <input type="text" formControlName="sql">
+    </div>
+  -----------------------------------------------------------------------------------------
+</form>

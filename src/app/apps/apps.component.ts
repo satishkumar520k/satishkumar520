@@ -67,14 +67,12 @@ export class AppsComponent implements OnInit {
     this.cartitems.push(obj);
   }
 
-
-
   lusers:any=[""]
   name1="";
   email="";
   phone=0;
   city="";
-
+  
   signup()
   {
     var obj:any={};
@@ -94,12 +92,9 @@ export class AppsComponent implements OnInit {
     this.isRed=!this.isRed;
     }
 
-
-
     constructor() { }
 
     ngOnInit(): void {
   }
-
 }
 

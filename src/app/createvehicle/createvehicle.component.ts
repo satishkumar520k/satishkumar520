@@ -29,7 +29,7 @@ submit()
     //   this.vehicleService=data;
     // },
     (data:any)=>{
-      alert("Succrss")
+      alert("Success")
     },
     (error:any)=>{
 

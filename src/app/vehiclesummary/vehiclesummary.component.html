@@ -33,10 +33,7 @@
         <option>5</option>
         <option>10</option>
     </select>
-    <button (click)="page()">page</button>
-   
-
-
+    <button (click)="page()">page</button>   
 <table>
     <thead>
         <tr>
@@ -57,11 +54,14 @@
             <td>{{vehicledata.manufacturer}}</td>
             <td>{{vehicledata.model|uppercase}}</td>
             <td>{{vehicledata.type}}</td>
-            <td [ngClass]="vehicledata.fuel=='Electric'?'lightgreen':'pink'">{{vehicledata.fuel}}</td>
+            <td [ngClass]="vehicledata.fuel== 'Electric'?'lightgreen':'pink'">{{vehicledata.fuel}}</td>
             <td>{{vehicledata.color}}</td>
             <!-- <td><img src="{{vehicledata.image}}" height="15%", width="15%"></td> -->
             <td>{{vehicledata.id}}</td>
             <!-- </ng-container> -->
+            <td>
+                <button (click) = "delete(vehicledata.id)">delete</button>
+                <button (click) = "view(vehicledata.id)">view</button>            </td>
         </tr>
     </tbody>    
 </table>

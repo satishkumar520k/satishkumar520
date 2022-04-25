@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  productsdata=[];
+  // productsdata=[];
   getProducts():Observable<any>
   {
     return this.httpclient.get("https://fakestoreapi.com/products")

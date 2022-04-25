@@ -1,0 +1,44 @@
+<p>productdetail works!</p>
+<!-- <pre>{{xyz|json</pre> -->
+<!-- <input [(ngModel)]="product" type="text"(keyup)="send()">    -->
+
+<ng-content *ngTemplateOutlet="xyz!=null ? blockone :blocktwo"></ng-content>
+<ng-template #blockone>
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.id}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.title}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.price}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.description}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.category}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.rating}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.rate}}</p>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <p>{{xyz.count}}</p>
+        </div>
+        <a class="btn btn-primary" (click) ="addtocart()">add to cart</a>
+        <a class="btn btn-primary">buy</a>
+    </div>
+</div>  
+</ng-template>
+
+<ng-template #blocktwo>
+    <p productdetail works></p>
+    <pre>{{xyz|json}}</pre>
+
+</ng-template>
+

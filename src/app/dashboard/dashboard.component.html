@@ -1,28 +1,38 @@
 
         <div class="parent">
             <div class="left">
-                <img src="/assets/fitness.webp">
-                <h5>Ken Kalil</h5>
-                <p>kneck@gmail.com</p><hr>
-                <h6 class="aa" routerLink="interpolation">interpolation</h6><br>
-                <h6 routerLink="eventbinding">event binding</h6><br>
-                <h6 routerLink="apps">apps</h6><br>
-                <h6 routerLink="vehiclesummary">vehicle summary</h6><br>
-                <h6 routerLink="home">home</h6><br>
-                <h6 routerLink="accounts">accounts</h6><hr><br>
-                <h6 routerLink="products">products</h6><hr><br>
-                <h6 routerLink="createvehicle">createvehicle</h6><hr><br>
-                <h6 routerLink="createaccount">createaccount</h6><hr><br>
+                <img src="sun-sunglasses.jpg" >
+                <h5 style="color: white;">Ken Kalil</h5>
+                <p style="color: white;">kneck@gmail.com</p><hr>
+                <h6 class="aa" routerLink="interpolation" style="color: white;">interpolation</h6><br>
+                <h6 routerLink="eventbinding" style="color: white;">event binding</h6><br>
+                <h6 routerLink="apps" style="color: white;">apps</h6><br>
+                <h6 routerLink="vehiclesummary" style="color: white;">vehicle summary</h6><br>
+                <h6 routerLink="createvehicle" style="color: white;">createvehicle</h6><br>
+                <h6 routerLink="home" style="color: white;">home</h6><br>
+                <h6 routerLink="accounts" style="color: white;">accounts</h6><br>
+                <h6 routerLink="createaccount" style="color: white;">createaccount</h6><br>
+                <h6 routerLink="products" style="color: white;">products</h6><br>
+                <h6 routerLink="allemployees" style="color: white;">allemployee</h6><br>
+                <h6 routerLink="createemployee" style="color: white;">createemployee</h6><br>
+                <h6 routerLink="employeedetails" style="color: white;">employeedetails</h6><br>
+                <h6 routerLink="aboutcompany" style="color: white;">aboutcompany</h6><br>
+                <h6 routerLink="contactus" style="color: white;">contactus</h6><br>
+                <h6 routerLink="parent" style="color: white;">parent</h6><br>
+                <h6 routerLink="child" style="color: white;">child</h6><br>
+                <h6 routerLink="siblingone" style="color: white;">siblingone</h6><br>
+                <h6 routerLink="siblingtwo" style="color: white;">siblingtwo</h6><br>
+                <h6 routerLink="productsummary" style="color: white;">productsummary</h6><br>
+                <h6 routerLink="productdetail" style="color: black;">productdetail</h6><br>
+                <h6 routerLink="sheet" style="color: black;">sheet</h6><br>
 
 
-                
-                <button class="but" routerLink="/logout">Log out</button>
-            
+
+
+                <!-- <button class="but" routerLink="/logout">Log out</button> -->
+                <button (click)="logout()">logout</button>            
             </div>
-            <div class="right">
-                
-                <router-outlet></router-outlet>
-                
-            </div>
-                
+            <div class="right">                
+                <router-outlet></router-outlet>               
+            </div>                
         </div>
